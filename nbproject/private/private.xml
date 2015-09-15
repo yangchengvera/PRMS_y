@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/radioprogram/controller/ManageRadioProgramCmd.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/layout/menu.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/tilepages/login.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/entity/User.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/home.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/tilepages/crudrp.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/radioprogram/service/ReviewSelectProgramService.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/radioprogram/entity/RadioProgram.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/service/AuthenticateService.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/dao/impl/UserDaoImpl.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/layout/body.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/entity/Role.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/radioprogram/controller/AddEditRadioProgramCmd.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/radioprogram/controller/DeleteRadioProgramCmd.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/login.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/tilepages/searchrp.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/dao/UserDao.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/layout/header.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/radioprogram/controller/EnterProgramDetailsCmd.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/controller/LoginCmd.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/layout/classic.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/controller/LogoutCmd.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/dao/impl/RoleDaoImpl.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/web/pages/crudrp.jsp</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/authenticate/delegate/AuthenticateDelegate.java</file>
+            <file>file:/Users/yangcheng/Documents/workspace/PRMS/src/java/sg/edu/nus/iss/phoenix/core/dao/DAOFactoryImpl.java</file>
+        </group>
+    </open-files>
+</project-private>
