@@ -1,10 +1,8 @@
 
-CREATE TABLE `phoenix`.`presenter-profile`
+CREATE TABLE `phoenix`.`presenter`
 (
-profileID int NOT NULL,
-  photo BLOB NULL COMMENT '',
-  sitelink VARCHAR(45) NULL COMMENT '',
-PRIMARY KEY (profileID),
-CONSTRAINT fk_PerOrders FOREIGN KEY (profileID)
-REFERENCES phoenix.presenter(name)
+  name VARCHAR(40) NOT NULL,
+  address VARCHAR(45) NULL COMMENT '',
+  joinDate Date NULL COMMENT '',
+PRIMARY KEY (name)
 )
