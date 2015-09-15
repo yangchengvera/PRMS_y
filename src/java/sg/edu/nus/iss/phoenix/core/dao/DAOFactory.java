@@ -8,6 +8,8 @@ import sg.edu.nus.iss.phoenix.authenticate.dao.RoleDao;
 import sg.edu.nus.iss.phoenix.authenticate.dao.UserDao;
 import sg.edu.nus.iss.phoenix.producer.dao.ProducerDAO;
 import sg.edu.nus.iss.phoenix.radioprogram.dao.ProgramDAO;
+import sg.edu.nus.iss.phoenix.presenter.dao.PresenterDAO;
+
 
 /**
  *
@@ -22,5 +24,8 @@ public interface DAOFactory {
 	UserDao getUserDAO();
         
         ProducerDAO getProducerDAO();
+        
+        PresenterDAO getPresenterDAO();
+
 	
 }

@@ -9,12 +9,16 @@ import sg.edu.nus.iss.phoenix.producer.dao.impl.ProducerDAOImpl;
 import sg.edu.nus.iss.phoenix.producer.entity.Producer;
 import sg.edu.nus.iss.phoenix.radioprogram.dao.ProgramDAO;
 import sg.edu.nus.iss.phoenix.radioprogram.dao.impl.ProgramDAOImpl;
+import sg.edu.nus.iss.phoenix.presenter.dao.PresenterDAO;
+import sg.edu.nus.iss.phoenix.presenter.dao.impl.PresenterDAOImpl;
 
 public class DAOFactoryImpl implements DAOFactory {
 	private UserDao userDAO = new UserDaoImpl();
 	private RoleDao roleDAO = new RoleDaoImpl();
 	private ProgramDAO rpdao = new ProgramDAOImpl();
         private ProducerDAO pddao = new ProducerDAOImpl();
+        private PresenterDAO prdao = new PresenterDAOImpl();
+
 
 	@Override
 	public UserDao getUserDAO() {
@@ -38,5 +42,9 @@ public class DAOFactoryImpl implements DAOFactory {
 		// TODO Auto-generated method stub
 		return pddao;
 	}
+        @Override
+        public PresenterDAO getPresenterDAO(){
+            return prdao;
+        }
 
 }
