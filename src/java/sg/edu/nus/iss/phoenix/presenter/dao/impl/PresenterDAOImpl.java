@@ -71,6 +71,17 @@ public class PresenterDAOImpl implements PresenterDAO{
         System.out.println("record size"+searchResults.size());
         return searchResults;
     }
+    
+    @Override
+    public List<Presenter> loadPresenter(String presenterName) throws SQLException {
+        openConnection();
+        String sql = "SELECT * FROM presenter WHERE (name ='"+ presenterName+"'); ";
+        List<Presenter> searchResults = listQuery(connection
+                        .prepareStatement(sql));
+        closeConnection();
+        System.out.println("record size"+searchResults.size());
+        return searchResults;
+    }
 
     @Override
     public void create(Presenter valueObject) throws SQLException {
@@ -146,6 +157,7 @@ public class PresenterDAOImpl implements PresenterDAO{
     public List<Presenter> searchMatching(Presenter valueObject) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
     
     protected int databaseUpdate(PreparedStatement stmt) throws SQLException {
@@ -154,6 +166,7 @@ public class PresenterDAOImpl implements PresenterDAO{
 
             return result;
     }
+
     
 	/**
 	 * databaseQuery-method. This method is a helper method for internal use. It
@@ -233,6 +246,7 @@ public class PresenterDAOImpl implements PresenterDAO{
 
 		return (List<Presenter>) searchResults;
 	}
+	
     
     private void openConnection() {
             try {
@@ -260,5 +274,20 @@ public class PresenterDAOImpl implements PresenterDAO{
                     e.printStackTrace();
             }
     }
-    
+
+
+//    
+//        String sql = "SELECT * FROM `presenter` WHERE (`name` = ? ); ";
+//        PreparedStatement stmt = null;
+//        openConnection();
+//        try {
+//                stmt = connection.prepareStatement(sql);
+//                stmt.setString(1, valueObject.getName());
+//                singleQuery(stmt, valueObject);
+//
+//        } finally {
+//                if (stmt != null)
+//                        stmt.close();
+//                closeConnection();
+//        }
 }

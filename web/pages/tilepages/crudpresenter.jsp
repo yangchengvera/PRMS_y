@@ -18,7 +18,8 @@
                 <c:param name="joinDate" value=""/>
                 <c:param name="insert" value="true"/>
         </c:url>
-	<c:if test="${sessionScope.user.roles[0].role==('admin')}">
+	<c:if test="${(sessionScope.user.roles[0].role==('admin'))||
+                      (sessionScope.user.roles[1].role==('admin'))}">
         <a href="${url}"><fmt:message key="label.crudrp.add"/></a>
 	</c:if>
         <br/><br/>
@@ -29,6 +30,8 @@
                 <th><fmt:message key="label.crudpresenter.joinDate"/></th>
                 <th><fmt:message key="label.crudpresenter.edit"/> <fmt:message key="label.crudrp.delete"/></th>
             </tr>
+            <c:if test="${(sessionScope.user.roles[0].role==('admin'))||
+                      (sessionScope.user.roles[1].role==('admin'))}">
             <c:forEach var="crudpresenter" items="${prs}" varStatus="status">
                 <tr class="${status.index%2==0?'even':'odd'}">
                     <td class="nowrap">${crudpresenter.name}</td>
@@ -44,12 +47,39 @@
                         <a href="${updurl}"><fmt:message key="label.crudpresenter.edit"/></a>
                         &nbsp;&nbsp;&nbsp;
                         <c:url var="delurl" scope="page" value="/nocturne/deleterp">
-                            <c:param name="name" value="${crudrp.name}"/>
+                            <c:param name="name" value="${crudpresenter.name}"/>
                         </c:url>
                         <a href="${delurl}"><fmt:message key="label.crudpresenter.delete"/></a>
                     </td>
                 </tr>
             </c:forEach>
+            </c:if>
+            <c:if test="${((sessionScope.user.roles[0].role==('presenter'))||
+                      (sessionScope.user.roles[1].role==('presenter')))&&(
+                      (sessionScope.user.roles[0].role!=('admin'))||
+                      (sessionScope.user.roles[1].role!=('admin')))}">
+            <c:forEach var="crudpresenter" items="${pr}" varStatus="status">
+                <tr class="${status.index%2==0?'even':'odd'}">
+                    <td class="nowrap">${crudpresenter.name}</td>
+                    <td class="nowrap">${crudpresenter.address}</td>
+                    <td class="nowrap">${crudpresenter.joinDate}</td>
+                    <td class="nowrap">
+                        <c:url var="updurl" scope="page" value="/nocturne/addeditrp">
+                            <c:param name="name" value="${crudpresenter.name}"/>
+                            <c:param name="address" value="${crudpresenter.address}"/>
+                            <c:param name="joinDate" value="${crudpresenter.joinDate}"/>
+                             <c:param name="insert" value="false"/>
+                        </c:url>
+                        <a href="${updurl}"><fmt:message key="label.crudpresenter.edit"/></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <c:url var="delurl" scope="page" value="/nocturne/deleterp">
+                            <c:param name="name" value="${crudpresenter.name}"/>
+                        </c:url>
+                        <a href="${delurl}"><fmt:message key="label.crudpresenter.delete"/></a>
+                    </td>
+                </tr>
+            </c:forEach>
+            </c:if>
         </table>
 </body>
 </html>

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import at.nocturne.api.Action;
 import at.nocturne.api.Perform;
+import sg.edu.nus.iss.phoenix.authenticate.entity.User;
 import sg.edu.nus.iss.phoenix.presenter.delegate.ReviewSelectPresenterDelegate;
 import sg.edu.nus.iss.phoenix.presenter.entity.Presenter;
 /**
@@ -23,8 +24,13 @@ public class ManagePresenterCmd implements Perform{
     @Override
     public String perform(String path, HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         ReviewSelectPresenterDelegate del = new ReviewSelectPresenterDelegate();
-        List<Presenter> data = del.reviewSelectPresenter();
-        req.setAttribute("prs", data);
+        List<Presenter> datas = del.reviewSelectPresenter();
+        List<Presenter> data = del.reviewPresenter(req.getParameter("presenterName"));
+        req.setAttribute("prs", datas);
+        req.setAttribute("pr",data);
+        System.out.println(req.getParameter("presenterName"));
+        String a = req.getParameter("presenterName");
+        
         return "/pages/crudpresenter.jsp";
     }
 }

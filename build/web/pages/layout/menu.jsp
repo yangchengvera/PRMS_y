@@ -67,15 +67,27 @@
 	</tr>
       
 	</c:if>
-        <c:if test="${sessionScope.user.roles[0].role==('admin'||'presenter')}">
+
+        <c:if test="${(sessionScope.user.roles[0].role==('presenter'||'admin'))||
+                      (sessionScope.user.roles[1].role==('presenter'||'admin'))}">
         <tr>
 		<td>
-				<a href="<c:url value="/nocturne/adminpresenter"/>"> <fmt:message
-						key="caption.menu.adminpresenter" />
-				</a>
-			</td>
+                    <form name="submitForm" method="POST" action="${pageContext.request.contextPath}/nocturne/adminpresenter">
+                    <input type="hidden" name="presenterName" value="${sessionScope.user.id}">
+                    <A HREF="javascript:document.submitForm.submit()">
+                        <fmt:message key="caption.menu.adminpresenter" /></A>
+                    </form>
+<!--				<a href="${pageContext.request.contextPath}/nocturne/adminpresenter"
+                                   name="presenterName"
+                                   value="${sessionScope.user.name}"
+                                    method=post/> 
+                                <fmt:message key="caption.menu.adminpresenter" />
+
+				</a>-->
+                </td>
 	</tr>
         </c:if>
+
 	<tr>
 		<td><a href="<c:url value="/nocturne/logout"/>"> <fmt:message
 					key="caption.menu.logout" />

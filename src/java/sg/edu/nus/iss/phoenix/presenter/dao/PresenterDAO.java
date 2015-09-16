@@ -52,6 +52,8 @@ public interface PresenterDAO {
 	 */
 	public abstract void load(Presenter valueObject)
 			throws NotFoundException, SQLException;
+        
+        public abstract List<Presenter> loadPresenter(String presenterName) throws SQLException;
 
 	/**
 	 * LoadAll-method. This will read all contents from database table and build

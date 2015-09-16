@@ -35,4 +35,14 @@ public class ReviewSelectPresenterService {
         return data;
     }
     
+    public List<Presenter> reviewPresenter(String presenterName){
+        List<Presenter> data = null;
+        try{
+            data = prdao.loadPresenter(presenterName);
+        }catch (SQLException ex){
+            Logger.getLogger(ReviewSelectPresenterService.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        return data;
+    }
+    
 }

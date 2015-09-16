@@ -22,5 +22,8 @@ public class ReviewSelectPresenterDelegate {
 	public List<Presenter> reviewSelectPresenter() {
 		return service.reviewSelectPresenter();	
 	}
+        public List<Presenter> reviewPresenter(String presenterName){
+            return service.reviewPresenter(presenterName);
+        }
 }
 
