@@ -14,6 +14,7 @@
         <c:url var="url" scope="page" value="/nocturne/addeditrp">
         		<c:param name="name" value=""/>
                 <c:param name="address" value=""/>
+                
                 <c:param name="joinDate" value=""/>
                 <c:param name="insert" value="true"/>
         </c:url>
