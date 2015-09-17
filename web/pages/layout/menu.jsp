@@ -41,7 +41,7 @@
 	</tr>
       
 	</c:if>
-        <c:if test="${sessionScope.user.roles[0].role=='producer'}">
+        <c:if test="${(sessionScope.user.roles[0].role=='producer')}">
 	<tr>
 		<td>
 				<a href="<c:url value="/nocturne/searchrp"/>"> <fmt:message
@@ -60,9 +60,14 @@
        
         <tr>
 		<td>
-				<a href="<c:url value="/nocturne/onlypd"/>"> <fmt:message
-						key="caption.menu.viewpersonaldetail" />
-				</a>
+	
+                                    <form name="submitForm" method="POST" action="${pageContext.request.contextPath}/nocturne/onlypd">
+                                    <input type="hidden" name="producer" value="${sessionScope.user.id}">
+                                    <A HREF="javascript:document.submitForm.submit()">
+                                        <fmt:message key="caption.menu.viewpersonaldetail" />
+                                        </A>                                         
+                                    </form>
+				
 			</td>
 	</tr>
       
